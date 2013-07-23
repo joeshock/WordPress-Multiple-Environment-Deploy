@@ -1,0 +1,22 @@
+# BEGIN WordPress
+
+<IfModule mod_rewrite.c>
+
+RewriteEngine On
+
+# Uncomment if environment is utilizing root directory or subdomain
+RewriteBase /
+
+# Uncomment if environment is utilizing one subdirectory
+#RewriteBase /projectname/
+
+# Uncomment if environment is utilizing two subdirectories
+#RewriteBase /clientname/projectname/
+
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+</IfModule>
+
+# END WordPress
