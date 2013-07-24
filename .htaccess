@@ -16,7 +16,16 @@ RewriteBase /
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+
+# Uncomment if environment is utilizing root directory or subdomain
 RewriteRule . /index.php [L]
+
+# Uncomment if environment is utilizing one subdirectory
+#RewriteRule . /projectname/index.php [L]
+
+# Uncomment if environment is utilizing two subdirectories
+#RewriteRule . /clientname/projectname/index.php [L]
+
 
 </IfModule>
 
