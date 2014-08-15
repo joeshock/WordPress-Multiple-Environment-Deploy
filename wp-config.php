@@ -77,6 +77,7 @@ switch( $currentEnvironment ){
 
 	// LOCAL
 	case $local:
+	$currentEnvironment .= $projectPath;
 	$current_db = $local_db;
 	$current_user = $local_user;
 	$current_pass = $local_pass;
